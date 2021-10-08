@@ -23,8 +23,8 @@ file.copy(paste0(out_dir, "output/RNA__RNA_seq_composite_expression.xls"), out_d
 file.remove(paste0(out_dir, "nci60_RNA__RNA_seq_composite_expression.zip"))
 unlink(paste0(out_dir, "output"), recursive=TRUE)
 
-# curl_download("https://discover.nci.nih.gov/cellminerdata/normalizedArchives/nci60_RNA__RNA_seq_isoforms.zip", paste0(out_dir, "nci60_RNA__RNA_seq_isoforms.zip"))
-# unzip(zipfile=paste0(out_dir, "nci60_RNA__RNA_seq_isoforms.zip"), exdir=out_dir)
-# file.copy(paste0(out_dir, "output/RNA__RNA_seq_isoforms.xls"), out_dir)
-# file.remove(paste0(out_dir, "nci60_RNA__RNA_seq_isoforms.zip"))
-# unlink(paste0(out_dir, "output"), recursive=TRUE)
+curl_download("https://discover.nci.nih.gov/cellminerdata/normalizedArchives/nci60_RNA__RNA_seq_isoforms.zip", paste0(out_dir, "nci60_RNA__RNA_seq_isoforms.zip"))
+unzip(zipfile=paste0(out_dir, "nci60_RNA__RNA_seq_isoforms.zip"), exdir=out_dir)
+file.copy(paste0(out_dir, "output/RNA__RNA_seq_isoforms.xls"), out_dir)
+file.remove(paste0(out_dir, "nci60_RNA__RNA_seq_isoforms.zip"))
+unlink(paste0(out_dir, "output"), recursive=TRUE)
