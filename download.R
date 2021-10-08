@@ -14,6 +14,7 @@ unlink(paste0(out_dir, "output"), recursive=TRUE)
 curl_download("https://discover.nci.nih.gov/cellminerdata/normalizedArchives/nci60_RNA__Agilent_Human_microRNA_(V2)_GeneSpringGX.zip", paste0(out_dir, "nci60_RNA__Agilent_Human_microRNA_(V2)_GeneSpringGX.zip"))
 unzip(zipfile=paste0(out_dir, "nci60_RNA__Agilent_Human_microRNA_(V2)_GeneSpringGX.zip"), exdir=out_dir)
 file.copy(paste0(out_dir, "output/RNA__Agilent_Human_microRNA_(V2)_GeneSpringGX.xls"), out_dir)
+file.rename(paste0(out_dir, "RNA__Agilent_Human_microRNA_(V2)_GeneSpringGX.xls"), paste0(out_dir, "RNA__Agilent_Human_microRNA_V2_GeneSpringGX.xls"))
 file.remove(paste0(out_dir, "nci60_RNA__Agilent_Human_microRNA_(V2)_GeneSpringGX.zip"))
 unlink(paste0(out_dir, "output"), recursive=TRUE)
 
